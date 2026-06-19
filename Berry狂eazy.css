@@ -293,3 +293,139 @@ body{
         width: 90%;
     }
 }
+
+
+
+/* ナビエリア */
+
+.navigation{
+
+    max-width: 1200px;
+
+    margin: 120px auto;
+
+    padding: 0 20px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+/* カード */
+
+.nav-card{
+
+    position: relative;
+
+    height: 260px;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    color: white;
+
+    background-size: cover;
+
+    background-position: center;
+
+    transition: 0.4s;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.4);
+}
+
+/* 背景画像 */
+
+.cast{
+    background-image: url("cast-bg.png");
+}
+
+.join{
+    background-image: url("join-bg.jpg");
+}
+
+.archive{
+    background-image: url("archive-bg.jpg");
+}
+
+.media{
+    background-image: url("media-bg.jpg");
+}
+
+/* 暗幕 */
+
+.overlay{
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.2)
+    );
+}
+
+/* テキスト */
+
+.nav-content{
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 30px;
+
+    z-index: 2;
+}
+
+.nav-content h2{
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+
+    letter-spacing: 4px;
+}
+
+.nav-content p{
+
+    opacity: 0.8;
+}
+
+/* hover */
+
+.nav-card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.02);
+
+    box-shadow:
+    0 0 20px rgba(255,120,200,0.25),
+    0 0 40px rgba(199,125,255,0.2);
+}
+
+/* スマホ */
+
+@media screen and (max-width: 768px){
+
+    .navigation{
+
+        grid-template-columns: 1fr;
+    }
+
+    .nav-card{
+
+        height: 220px;
+    }
+}
